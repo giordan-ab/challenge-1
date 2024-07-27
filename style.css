@@ -1,0 +1,51 @@
+body{
+    height: 100vh;
+}
+
+h1{
+    font-size: 100px;
+    margin: 0%;
+    margin-left: 60px;
+    font-family: 'Maven Pro', sans-serif;
+    color:rgb(58, 58, 133);
+}
+
+p{
+    margin-left: 170px;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: rgb(88, 88, 85);
+}
+
+#userInput {
+    margin-left: 190px; 
+}
+
+div{
+    margin-bottom: 20px;
+    margin-top: 300px;
+    margin-left: 250px;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.Encriptar, .Desencriptar, .Copiar{
+    background-color: rgb(213, 218, 224);
+    padding: 15px 50px;
+    border-radius: 15px;
+    text-decoration: none;
+    border: 2px solid rgb(191, 128, 250);
+}
+
+.Copiar {
+    margin-left: 200px; /* Aumenta el espacio antes del botón "Copiar" */
+}
+
+.Encriptar:hover, .Desencriptar:hover, .Copiar:hover {
+    background-color: rgb(58, 58, 133);
+    color: aliceblue;
+}
+
+
