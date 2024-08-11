@@ -46,20 +46,32 @@ function desencriptar() {
     input.value = textoDesencriptado;
 }
 
+// Función para copiar el texto al portapapeles
 function copyText() {
     // Obtiene el elemento de input
     let input = document.getElementById('userInput');
-    console.log(input);
+    
+    if (input.value !== "") { // Verifica que haya texto en el input
+        // Selecciona el texto del input
+        input.select();
+        input.setSelectionRange(0, 99999); // Para dispositivos móviles
 
-    // Selecciona el texto del input
-    input.select();
-    input.setSelectionRange(0, 99999); // Para dispositivos móviles
+        // Copia el texto al portapapeles
+        navigator.clipboard.writeText(input.value).then(function() {
+            console.log('Texto copiado al portapapeles: ' + input.value);
+            
+            // Llama a la función para limpiar el campo de entrada
+            clearInput();
+        }).catch(function(err) {
+            console.error('Error al copiar al portapapeles: ', err);
+        });
+    } else {
+        console.log('No hay texto para copiar');
+    }
+}
 
-    // Copia el texto al portapapeles
-    navigator.clipboard.writeText(input.value).then(function() {
-        console.log('Texto copiado al portapapeles: ' + input.value);
-    }).catch(function(err) {
-        console.error('Error al copiar al portapapeles: ', err);
-    });
+// Función para limpiar el campo de entrada
+function clearInput() {
+    document.getElementById('userInput').value = "";
 }
 
