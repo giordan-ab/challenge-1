@@ -48,4 +48,16 @@ div{
     color: aliceblue;
 }
 
+.Copiar {
+    margin-left: 200px; /* Mantiene la alineación con el mensaje */
+}
+
+#mensaje {
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    color: rgb(58, 58, 133); /* Color del texto */
+    margin-top: -200px;
+    margin-left: 550px; /* Alinea el párrafo con el botón "Copiar" */
+    margin-bottom: 10px; /* Espacio entre el párrafo y el botón */
+    text-align: center; /* Centra el texto dentro del elemento */
+}
 
