@@ -20,6 +20,7 @@ function encriptar() {
     }
 
     input.value = textoEncriptado;
+    mostrarMensaje("¡Texto encriptado!");
 }
 
 // Función para desencriptar el texto
@@ -44,6 +45,7 @@ function desencriptar() {
     }
 
     input.value = textoDesencriptado;
+    mostrarMensaje("¡Texto desencriptado!");
 }
 
 // Función para copiar el texto al portapapeles
@@ -62,6 +64,7 @@ function copyText() {
             
             // Llama a la función para limpiar el campo de entrada
             clearInput();
+            mostrarMensaje("¡Texto copiado con éxito!");
         }).catch(function(err) {
             console.error('Error al copiar al portapapeles: ', err);
         });
@@ -75,3 +78,8 @@ function clearInput() {
     document.getElementById('userInput').value = "";
 }
 
+// Función para mostrar mensajes en la página
+function mostrarMensaje(mensaje) {
+    const mensajeElemento = document.getElementById('mensaje');
+    mensajeElemento.textContent = mensaje;
+}
