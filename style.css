@@ -37,6 +37,7 @@ div{
     border-radius: 15px;
     text-decoration: none;
     border: 2px solid rgb(191, 128, 250);
+    width: 50%;
 }
 
 .Copiar {
